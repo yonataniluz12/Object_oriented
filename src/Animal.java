@@ -1,8 +1,12 @@
-public class Animal {
-    private String Name;
-    private int Age;
-    private int Calories;
-    private boolean Top_predator;
+public  abstract class Animal {
+    protected String Name;
+    protected int Age;
+    protected int Calories;
+    protected boolean Top_predator;
+
+    public Animal(int age, int calories, String name, boolean top_predator) {
+    }
+
 
     public void Animal(String Name,int Age,int Calories,boolean Top_predator){
         this.Age = Age;
@@ -39,7 +43,7 @@ public class Animal {
         return Calories;
     }
 
-    public boolean isTop_predator() {
+    public boolean getTop_predator() {
         return Top_predator;
     }
 
@@ -52,5 +56,9 @@ public class Animal {
                 ", Top_predator=" + Top_predator +
                 '}';
     }
+    public int Eat(){
+        return this.Calories*3;
+    }
+
 }
 

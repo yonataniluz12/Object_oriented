@@ -1,8 +1,9 @@
-public class Mammal extends Animal {
-    private int Calories_milk;
-    private int Intmonths_pregnancy;
+public abstract class Mammal extends Animal {
+    protected int Calories_milk;
+    protected int Intmonths_pregnancy;
 
-    public void Mammal(int calories_milk,int intmonths_pregnancy) {
+    public Mammal(int calories_milk,int intmonths_pregnancy, int Age,int Calories,String Name,boolean Top_predator) {
+        super(Age,Calories,Name,Top_predator);
         this.Calories_milk = calories_milk;
         this.Intmonths_pregnancy = intmonths_pregnancy;
     }
@@ -30,5 +31,8 @@ public class Mammal extends Animal {
                 "Calories_milk=" + Calories_milk +
                 ", Intmonths_pregnancy=" + Intmonths_pregnancy +
                 '}';
+    }
+    public int Eat(){
+        return super.Eat()+this.Calories_milk;
     }
 }

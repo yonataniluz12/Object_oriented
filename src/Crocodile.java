@@ -1,7 +1,8 @@
 public class Crocodile extends Reptile {
     private boolean Crocodile;
 
-    public Crocodile(boolean crocodile) {
+    public Crocodile(boolean crocodile,int age, int calories, String name, boolean top_predator,int Tail_length) {
+        super(age, calories, name, top_predator,Tail_length);
         Crocodile = crocodile;
     }
 
@@ -18,5 +19,9 @@ public class Crocodile extends Reptile {
         return "Crocodile{" +
                 "Crocodile=" + Crocodile +
                 '}';
+    }
+    @Override
+    public int Eat(){
+        return this.Calories * 4;
     }
 }

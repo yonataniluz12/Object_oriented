@@ -1,11 +1,9 @@
 public class Eagle extends Bird {
     private int sight_distance;
 
-    public Eagle(int wingspan, int flight_altitude) {
-        super(wingspan, flight_altitude);
-    }
 
-    public void Eagle(int sight_distance) {
+    public Eagle(int sight_distance,int wingspan,int flight_altitude, int Age,int Calories,String Name,boolean Top_predator) {
+        super(wingspan,flight_altitude,Age,Calories,Name,Top_predator);
         this.sight_distance = sight_distance;
     }
 

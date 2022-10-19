@@ -2,7 +2,8 @@ public class Bird extends Animal{
     private int flight_altitude;
     private int wingspan;
 
-    public Bird(int wingspan,int flight_altitude) {
+    public Bird(int wingspan,int flight_altitude, int Age,int Calories,String Name,boolean Top_predator){
+        super(Age,Calories,Name,Top_predator);
         this.wingspan = wingspan;
         this.flight_altitude = flight_altitude;
     }
@@ -29,5 +30,15 @@ public class Bird extends Animal{
                 "flight_altitude=" + flight_altitude +
                 ", wingspan=" + wingspan +
                 '}';
+    }
+    @Override
+    public int Eat(){
+        return this.Calories*3-1000;
+    }
+    public static String sing(){
+        return "chif chif";
+    }
+    public static void Dance(){
+        System.out.println("guru guru");
     }
 }
